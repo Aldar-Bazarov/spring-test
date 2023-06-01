@@ -5,8 +5,8 @@ import java.util.UUID;
 
 public class User {
     private final UUID id;
-    private String username;
-    private String password;
+    private final String username;
+    private final String password;
 
     public User(@JsonProperty("id") UUID id,
                 @JsonProperty("username") String username,
@@ -24,15 +24,7 @@ public class User {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public String getPassword() {
         return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 }

@@ -10,7 +10,7 @@ import java.util.UUID;
 
 @Repository("fakeDao")
 public class FakeUserDataAccessService implements UserDao {
-    private static List<User> DB = new ArrayList<>();
+    private static final List<User> DB = new ArrayList<>();
     @Override
     public int insertUser(UUID id, User user) {
         DB.add(new User(id, user.getUsername(), user.getPassword()));
